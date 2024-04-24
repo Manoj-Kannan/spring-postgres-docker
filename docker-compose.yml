@@ -18,7 +18,12 @@ services:
       - "5433:5432"
     networks:
       - students-network
+    volumes:
+      - postgres-students-volume:/var/lib/postgresql/data
 
 networks:
   students-network:
     driver: bridge
+
+volumes:
+  postgres-students-volume:

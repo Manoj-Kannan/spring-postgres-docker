@@ -1,11 +1,14 @@
 package com.example.SpringPostgresDocker;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
 public class Students {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private int age;
